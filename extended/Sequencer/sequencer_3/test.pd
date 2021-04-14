@@ -1,0 +1,42 @@
+#N canvas 341 277 601 538 10;
+#X obj 187 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 308 257 ==;
+#X obj 262 219 t f f;
+#X obj 274 328 f;
+#X obj 243 274 f;
+#X obj 243 193 t b f f;
+#X floatatom 243 172 5 0 0 0 - - -;
+#X obj 243 301 sel 0 1;
+#X obj 187 315 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 274 359 5 0 0 0 - - -;
+#X obj 187 60 key;
+#X obj 187 97 sel 32;
+#X obj 365 186 cnv 15 100 60 empty number 4 30 30 0 50 -249022 -66577
+0;
+#X msg 274 425 label \$1;
+#X obj 274 448 s number;
+#X obj 274 402 makefilename %i;
+#X obj 274 379 + 1;
+#X obj 243 149 random 5;
+#X connect 0 0 17 0;
+#X connect 1 0 4 1;
+#X connect 2 0 1 1;
+#X connect 2 1 3 1;
+#X connect 3 0 9 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 5 1 2 0;
+#X connect 5 2 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 3 0;
+#X connect 7 1 8 0;
+#X connect 8 0 0 0;
+#X connect 9 0 16 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 13 0 14 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X connect 17 0 6 0;

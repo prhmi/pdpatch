@@ -1,0 +1,5 @@
+#N canvas 647 211 686 431 10;
+#X obj 25 36 sequencer1;
+#X obj 25 15 tgl 20 0 empty empty empty 0 -7 0 10 -111517 -232699 -262144
+0 1;
+#X connect 1 0 0 0;

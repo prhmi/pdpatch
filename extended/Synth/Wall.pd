@@ -1,0 +1,18 @@
+#N canvas 555 133 712 651 10;
+#X obj 87 300 synth1;
+#X msg 588 384 \; pd dsp 1 \;;
+#X obj 588 356 loadbang;
+#X obj 337 300 synth2;
+#X obj 317 39 chords2;
+#X obj 203 480 dac~;
+#X obj 588 415 rcrd;
+#X obj 104 481 s~ synth1;
+#X obj 365 480 s~ synth2;
+#X obj 87 39 makenote2;
+#X connect 0 0 5 1;
+#X connect 0 0 5 0;
+#X connect 0 0 7 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 3 0 5 1;
+#X connect 3 0 8 0;
