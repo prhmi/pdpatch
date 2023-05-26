@@ -1,0 +1,71 @@
+#N canvas 732 204 808 378 12;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array WavePoints 100 float 3;
+#A 0 0 -0.36 -0.2 -0.72 0.66 -0.86 -0.5 0.64 0.66 0.04 -0.2 -0.88 0.96
+0.56 -0.02 -0.86 -0.68 -0.32 0.88 0.8 0.4 -0.56 -0.08 -0.74 -0.34 -0.44
+0.0599999 0.34 -0.7 -0.18 0.8 -0.08 0.32 0.52 -0.92 -0.62 0.38 -0.98
+0.32 -0.84 -0.1 0.16 -0.64 0.12 -0.14 0.74 -0.62 -0.92 -0.08 -0.04
+-1 0.28 0.34 -0.04 -0.92 0.84 -0.1 0.22 -0.18 0.24 -0.06 0.04 -0.32
+-0.28 0.26 -0.98 0.34 -0.14 -0.86 -0.44 -0.32 -0.02 -0.66 -0.72 0.76
+-0.38 -0.04 -0.48 0.76 0.02 0.5 -0.24 -0.02 -0.42 0.78 0.16 0.78 -0.7
+0.96 0 0.58 0.34 -0.52 0.12 0.82 -0.66 0.98 -0.6 -0.12 0.0599999;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 555 194 graph;
+#X obj 362 237 tabwrite WavePoints;
+#X obj 493 87 i;
+#X obj 533 87 + 1;
+#X obj 545 160 sel 1;
+#X msg 566 52 0;
+#X floatatom 493 111 5 0 0 0 - - -;
+#X obj 488 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 362 154 random 100;
+#X obj 362 178 / 50;
+#X obj 362 202 - 1;
+#X obj 493 57 metro 1;
+#X obj 54 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 54 66 metro 1;
+#X obj 54 90 f;
+#X obj 88 90 + 1;
+#X obj 88 114 % 10;
+#X obj 54 153 tabread WavePoints;
+#X obj 54 177 pack;
+#X msg 54 201 \$1 \$2;
+#X obj 54 225 vline~;
+#X obj 54 249 *~ 0.1;
+#X obj 54 273 dac~;
+#X floatatom 108 32 5 0 0 0 - - -;
+#X obj 168 49 hsl 128 15 0.001 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 545 130 == 100;
+#X connect 2 0 3 0;
+#X connect 2 0 6 0;
+#X connect 3 0 2 1;
+#X connect 3 0 25 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 1;
+#X connect 5 0 11 0;
+#X connect 6 0 1 1;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 1 0;
+#X connect 11 0 2 0;
+#X connect 11 0 8 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 0 17 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 1;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 21 0 22 1;
+#X connect 23 0 13 1;
+#X connect 23 0 18 1;
+#X connect 24 0 23 0;
+#X connect 25 0 4 0;
